@@ -1,0 +1,76 @@
+1-1
+
+In class, we mentioned the 3 (or 4) V's of Big Data, two of which are volume 
+and velocity. What is the third V? Why is it an important part of Big Data?
+
+The third V of big data is variety. This is important because the more variety
+there is in a dataset, the more difficult it is to systematically organize the 
+data. For example, if a company is trying to store photographs, books, and
+tweets in its database, then there is not one spreadsheet that can easily store
+all of it. An example of a dataset that has a lot of variety is emails, since
+each email has different text, attachments, links, photos, etc.
+
+---------------------
+
+Choose a Big Data use case that is of interest to you. Analyze its requirements
+around each of the V's.
+
+Hearthstone is a online collectible card videogame developed by Blizzard
+Entertainment. As of March 2017, Hearthstone boasts a userbase of 70 million
+players, a number that has nearly doubled every year since the game was
+released in 2014.
+
+Blizzard's data management can be described as big data according to the three
+V's:
+
+Volume:
+Maintaining user info for its 70 million players is the the least of Blizzard's
+concerns when it comes to volume. Each user has a personal digital card
+collection with hundreds (if not over a thousand) cards, which can each be
+normal or "golden." In addition, Blizzard records data on every single match
+played on its servers. The games are relatively short (10 minutes), so its easy
+to see how this number can grow very large given Hearthstone's playerbase.
+
+Velocity:
+Players are playing Hearthstone 24/7, since there are servers in North America,
+Europe, and Asia. This means game data is constantly being stored around the
+clock.
+
+Variety:
+The following types of data in Hearthstone are all very different from each
+other: user information, user card collection, user chat logs (P2P chat), and
+match data (which alone includes: cards used, players' actions on each turn,
+win rate, etc.). This data must be systematically stored in a way to make it
+easily accessible despite the data diversity.
+
+---------------------
+
+1-2
+
+Log into Ambari at https://130.211.222.19. Browse around what technologies are
+currently installed. Submit the maximum HBase heap size.
+
+990.8 MB
+
+---------------------
+
+1-3
+
+Like any architecture, the lambda architecture is not right for all
+applications. Critique the lambda architecture by coming up with some simple
+characterizations of what applications the lambda architecture is good for and
+bad for and how it might be improved.
+
+One of the main emphases of the lambda architecture is that the input raw data is
+unchanged without updates. This is naturally a good thing, as we discussed in
+lecture, as it has human fault tolerance and is simple to maintain. As long as
+the application is one where timestamping data is straightforward, this is a
+major benefit of using lambda architecture.
+
+A major downside with lambda architecture is that two codebases have to be
+maintained to do essentially the same thing in the batch layer and the speed
+layer. This can be complex, and depending on the type of project, make it
+cumbersome to sustain and debug. If it was possible to have a "master" 
+programming language that one could use for both the batch and speed layers,
+and the compiler of the language could automatically convert the same code to
+the two layers, then this problem could be improved.
