@@ -1,0 +1,46 @@
+digraph "WeatherAnalytics" {
+node [style=filled, shape=record];
+edge [arrowsize=0.5];
+rankdir=LR
+node [fillcolor=beige];
+Data [label="struct Data|<field_station>station :: WeatherStation|<field_time>time :: Time|<field_data>data :: DataUnit"];
+node [fillcolor=beige];
+WeatherStation [label="struct WeatherStation|<field_STN>STN :: i64|<field_WBAN>WBAN :: i64"];
+node [fillcolor=beige];
+Time [label="struct Time|<field_YEAR>YEAR :: i64|<field_MODA>MODA :: i64"];
+node [fillcolor=lightcyan];
+DataUnit [label="union DataUnit|<field_temp>temp :: Temp|<field_dew>dew :: DewPoint|<field_slp>slp :: SLPressure|<field_stp>stp :: StPressure|<field_vis>vis :: Visibility|<field_wdsp>wdsp :: WindSpeed|<field_prec>prec :: Precipitation|<field_SNDP>SNDP :: double|<field_FRSHTT>FRSHTT :: i64"];
+node [fillcolor=beige];
+Temp [label="struct Temp|<field_meantemp>meantemp :: MeanTemp|<field_maxtemp>maxtemp :: MaxTemp|<field_mintemp>mintemp :: MinTemp"];
+node [fillcolor=beige];
+MeanTemp [label="struct MeanTemp|<field_TEMP>TEMP :: double|<field_Count>Count :: i64"];
+node [fillcolor=beige];
+MaxTemp [label="struct MaxTemp|<field_MAX>MAX :: double|<field_Flag>Flag :: string"];
+node [fillcolor=beige];
+MinTemp [label="struct MinTemp|<field_MIN>MIN :: double|<field_Flag>Flag :: string"];
+node [fillcolor=beige];
+DewPoint [label="struct DewPoint|<field_DEWP>DEWP :: double|<field_Count>Count :: i64"];
+node [fillcolor=beige];
+SLPressure [label="struct SLPressure|<field_SLP>SLP :: double|<field_Count>Count :: i64"];
+node [fillcolor=beige];
+StPressure [label="struct StPressure|<field_STP>STP :: double|<field_Count>Count :: i64"];
+node [fillcolor=beige];
+Visibility [label="struct Visibility|<field_VISIB>VISIB :: double|<field_Count>Count :: i64"];
+node [fillcolor=beige];
+WindSpeed [label="struct WindSpeed|<field_WDSP>WDSP :: double|<field_Count>Count :: i64|<field_MXSPD>MXSPD :: double|<field_GUST>GUST :: double"];
+node [fillcolor=beige];
+Precipitation [label="struct Precipitation|<field_PRCP>PRCP :: double|<field_Flag>Flag :: string"];
+Data:field_station -> WeatherStation
+Data:field_time -> Time
+Data:field_data -> DataUnit
+DataUnit:field_temp -> Temp
+DataUnit:field_dew -> DewPoint
+DataUnit:field_slp -> SLPressure
+DataUnit:field_stp -> StPressure
+DataUnit:field_vis -> Visibility
+DataUnit:field_wdsp -> WindSpeed
+DataUnit:field_prec -> Precipitation
+Temp:field_meantemp -> MeanTemp
+Temp:field_maxtemp -> MaxTemp
+Temp:field_mintemp -> MinTemp
+}
