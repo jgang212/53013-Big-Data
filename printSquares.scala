@@ -1,7 +1,5 @@
-def printSquares(start: Int, end: Int): Unit = 
-	for( a <- start to end)
-	{
-         println(a, "  ", a*a);
-	}
-
-printSquares(1, 5)
+val square = (i: Int) => { i * i }
+for (a <- 1 to 10)
+{
+    println(a, square(a))
+}
