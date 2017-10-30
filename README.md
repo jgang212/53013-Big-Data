@@ -38,4 +38,6 @@ salt as it only represents a dataset of 11 flights.
 printSquares.scala contains a function that calculates a square and then under
 the function, I print them in tuple format.
 
-
+fibonacci.scala contains a function that calculates the nth fibonacci number
+using tail recursion. Then under the function, I print the first 10 fibonacci
+numbers.

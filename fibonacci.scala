@@ -8,4 +8,7 @@ def fibonacci(n : Int) : Int =
     return fibonacci_tail(n, 0, 1)
 }
 
-println(fibonacci(6))
+for (a <- 1 to 10)
+{
+    println(fibonacci(a))
+}
