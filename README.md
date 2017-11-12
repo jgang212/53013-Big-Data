@@ -1,4 +1,5 @@
 7-1 with Extra Credit
+
 For Spark, I modified the original DelaysWithSD.scala and removed
 the weather filtering. Instead, I just added the "all_avg" column
 and grouped the data only on route. Then, I sorted the entire table
@@ -14,6 +15,7 @@ highest average delay first and selected the first row. Again, it
 returned CAK->TYS with an average delay of 1236 minutes.
 
 7-2
+
 Again, using the original DelaysWithSD.scala, I created a new
 DelayByAirline.scala that adds "carrier" to the grouping in addition
 to the route. I then sorted the resulting table by route and then by
