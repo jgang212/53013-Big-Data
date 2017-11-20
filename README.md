@@ -1,3 +1,8 @@
+8-1
+
+I've added my partial work to cgi-bin/, html/ and 
+SparkStreaming.scala.
+
 8-2
 
 Since Bloom filters can never have false negatives (only false
