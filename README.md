@@ -1,0 +1,1 @@
+Each branch is an assignment. The FinalProject branch contains a tool that ingests Reddit data and returns useful stats for each queried subreddit.
