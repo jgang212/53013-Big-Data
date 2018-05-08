@@ -1,8 +1,0 @@
-3-1: 10/10
-3-2: 6/10
-3-3: 10/10
-3-3 Extra Credit: 0/10
-
-Total: 26/30
-
-notes on 3-2: you need to write to hdfs
